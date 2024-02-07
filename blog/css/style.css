@@ -1,0 +1,441 @@
+/* Reset default styles for all elements */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Styles for the overall body of the webpage */
+body {
+    font-family: 'open sans', sans-serif;
+    font-size: 18px;
+}
+
+/* Styles for the navigation bar */
+nav{
+    background: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    height: 100px;
+}
+
+/* Styles for the navigation bar's unordered list */
+nav ul{
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+    padding: 40px;
+    gap: 20px;
+}
+
+/* Styles for the logo within the navigation bar */
+.li-logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Styles for the logo icon within the navigation bar */
+.li-logo i {
+    font-size: 200%;
+}
+
+/* Styling for unvisited, visited, and active links */
+a, a:visited, a:active {
+    color: white;
+    text-decoration: none;
+}
+
+/* Styles for the main content area */
+main{
+    margin-top: 100px;
+    min-height: calc(100vh - 200px);
+    display: flex;
+}
+
+/* Styles for a group of cards */
+.cards {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 40px;
+    margin: 0 auto;
+    width: calc(100% - 80px);
+}
+
+/* Additional styles for a specific div with class 'cards' */
+div.cards{
+    justify-content: center;
+}
+
+/* Styles for heading elements h1 and h2 */
+h1 {
+    font-size: 300%;
+}
+
+h2 {
+    font-size: 200%;
+}
+
+h1, h2 {
+    font-family: 'Dancing Script';
+    font-weight: 700;
+}
+
+/* Styles for paragraphs */
+p{
+    max-width: 55ch;
+    margin: 0 auto;
+}
+
+/* Styles for unordered lists */
+ul{
+    list-style: none; /* Remove list-style for unordered lists */
+}
+
+/* Styles for list items */
+li {
+    list-style-position: inside;
+}
+
+/* Styles for ordered lists */
+ol{
+    margin: 0 auto;
+}
+
+/* Styles for the card in the main page */
+.card {
+    width: 400px;
+    aspect-ratio: 1/1;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.2);
+    animation-name: popup;
+    animation-duration: 0.8s;
+}
+
+/* Animation delay for specific card elements */
+.card:nth-of-type(2){
+    animation-delay: 0.2s;
+    animation-fill-mode: backwards;
+}
+
+.card:nth-of-type(3){
+    animation-delay: 0.3s;
+    animation-fill-mode: backwards;
+}
+
+.card:nth-of-type(4){
+    animation-delay: 0.4s;
+    animation-fill-mode: backwards;
+}
+
+/* Styles for header within a card */
+.card header {
+    height: 50%;
+    display: flex;
+    align-items:flex-start;
+    justify-content: flex-end;
+}
+
+/* Styles for h2 within a card header */
+.card header h2{
+    font-family:serif;
+    padding: 10px;
+    margin: 20px;
+    color: white;
+}
+
+/* Header styles for specific cards */
+.header--amsterdam{
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)),  url("/img/1.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.header--rijksmusuem{
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)),  url("/img/rm.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.header--Madame{
+    background: linear-gradient(rgba(225,0,0,0.2), rgba(220,0,0,0.2)),  url("/img/mta.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.header--concertgebouw{
+    background: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)),  url("/img/concert.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+/* Styles for sections within a card */
+.card section{
+    height: 49%;
+    padding: 20px;
+    border-bottom: 0.5px solid rgba(214, 214, 214, 0.4);
+    border-left: 0.5px solid rgba(214, 214, 214, 0.4);
+    border-right: 0.5px solid rgba(214, 214, 214, 0.4);
+}
+
+/* Styles for the footer within a card */
+.card .cfooter{
+    height: 1%;
+    padding: 30px;
+    background: none;
+    border-bottom: 0.5px solid rgba(214, 214, 214, 0.4);
+    border-left: 0.5px solid rgba(214, 214, 214, 0.4);
+    border-right: 0.5px solid rgba(214, 214, 214, 0.4);
+    display: flex;
+    align-items: center;
+}
+
+/* Styles for links within the footer of a card */
+.card .cfooter a {
+    color: blue;
+}
+
+/* Styles for an article section */
+article {
+    width: 65vw;
+    margin: 0 auto;
+    background-color: whitesmoke;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    animation-name: popup;
+    animation-duration: 0.8s;
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+
+/* Styles for the sections within the article */
+section{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Styles for a headers within the article */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Styles for images */
+img{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+
+/* Styles for specific images with classes rm3, mta3, and con3 */
+.rm3 {
+    width: 75%;
+    height: 100%;
+    border-radius: 0%;
+}
+
+.mta3 {
+    width: 75%;
+    height: 100%;
+    border-radius: 0%;
+}
+
+.con3 {
+    width: 75%;
+    height: 100%;
+    border-radius: 0%;
+}
+
+/* Styles for video elements */
+video {
+    display: block;
+    margin: 0 auto;
+    max-width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a shadow to videos */
+}
+
+/* Styles for form in contact page*/
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Styles for the div's elements within the form */
+form div{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+/* Styles for h2 elements within the form */
+form h2{
+    font-family: "Open Sans";
+    font-weight: 400;
+    font-size: 200%;
+}
+
+/* Styles for input and textarea elements within the form */
+input,textarea{
+    font-size: 100%;
+    font-family: 'Open Sans';
+    padding: 5px;
+}
+
+/* Styles for textarea elements within the form */
+textarea{
+    height: 200px;
+    resize: none;
+}
+
+/* Styles for submit button within a form */
+input[type="submit"]{
+    background: black;
+    border: none;
+    width: 200px;
+    color: white;
+}
+
+/* Hover effect for the submit button */
+input[type="submit"]:hover{
+    cursor: pointer;
+}
+
+/* Styles for a container element */
+.container {
+    max-width: 1170px;
+    margin: auto;
+}
+
+/* Styles for the footer section */
+.footer{
+    height: 100px;
+    background: black;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Styles for paragraphs within the footer section */
+.footer p{
+    margin: 0;
+    padding: 0 40px;
+}
+
+/* Styles for a row element */
+.row {
+    display: flex;
+    flex-wrap: wrap; /* Display as flex and wrap content within a row */
+}
+
+/* Styles for columns within the footer */
+.footer-col{
+    width: 25%;
+    padding: 0 15px;
+}
+
+/* Styles for h4 elements within footer columns */
+.footer-col h4{
+    font-size: 18px;
+    color: #fff;
+    text-transform: capitalize;
+    margin-bottom: 30px;
+    font-weight: 500;
+    position: relative;
+}
+
+/* Styles for paragraphs within footer columns */
+.footer-col p {
+    color: #bbb;
+}
+
+/* Styles for links within unordered lists in footer columns */
+.footer-col ul li a{
+    font-size: 16px;
+    text-transform: capitalize;
+    color: #fff;
+    text-decoration: none;
+    color: #bbb;
+    display: block;
+    transition: all 0.3s ease;
+}
+
+/* Hover effect for links within unordered lists in footer columns */
+.footer-col ul li a:hover{
+    color: #fff;
+    padding-left: 8px;
+}
+
+/* Styles for the footer section */
+footer{
+    background-color: black;
+    padding: 70px 0;
+}
+
+/* Keyframes for a popup animation */
+@keyframes popup {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+/* Media query for screen width up to 1000px */
+@media screen and (max-width: 1000px) {
+    body{
+        font-size: 14px; /* Decrease font size for smaller screens */
+    }
+    article{
+        width: 100%; /* Make articles take full width on smaller screens */
+    }
+    h1{
+        font-size: 220%; /* Adjust h1 font size on smaller screens */
+    }
+
+    nav{
+        padding: 10; /* Add padding to navigation on smaller screens */
+    }
+
+    .cards{
+        padding: 20px 0; /* Adjust padding for cards on smaller screens */
+    }
+
+    .footer p:nth-of-type(2){
+        display: none; /* Hide the second paragraph in the footer on smaller screens */
+    }
+}
+
+/* Media query for screen width up to 767px */
+@media(max-width: 767px) {
+    .footer-col {
+        /* Adjust width and margin for footer columns on smaller screens */
+        width: 50%;
+        margin-bottom: 30px;
+    }
+}
+
+/* Media query for screen width up to 574px */
+@media(max-width: 574px) {
+    .footer-col {
+        width: 100%; /* Adjust width for footer columns on even smaller screens */
+    }
+}
